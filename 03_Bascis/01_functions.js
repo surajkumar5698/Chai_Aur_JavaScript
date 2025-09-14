@@ -37,3 +37,39 @@ function loginUserMessage(user){
 // console.log(loginUserMessage("Gudiya"));
 console.log(loginUserMessage());// if function ask for agrumnet if we not provid then it will return undefine.
 
+
+function calculateCartPrice(val1, val2 ,...num){//when user pass multipul values then the rest operater(...) is use and it will return a array of that value. val1 and val2 get first and second value and other  go rest operater ;
+    return num;
+}
+
+console.log(calculateCartPrice(200,330,56,100,450));
+
+
+const user ={
+    userName:"suraj",
+    price:199
+}
+
+function handleObject(anyObject){
+    console.log(`user name is ${anyObject.userName} and price is ${anyObject.price}`);
+    
+}
+
+// handleObject(user);
+//  we dirctly pass the object also like that 
+
+handleObject({
+    userName:"gudiya",
+    price:399
+})
+
+const myArr =[200,400,600,523];
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+// console.log(returnSecondValue(myArr));
+// we can also pass array directly 
+
+console.log(returnSecondValue([100,200,563,45,100]));
+
