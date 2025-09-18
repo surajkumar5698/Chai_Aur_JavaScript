@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM  | Chai aur code</title>
+</head>
+<body style="background-color: black; color:#ffff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li= document.createElement('li');
+        li.innerHTML=`${langName}`;
+        document.querySelector('.language').appendChild(li);
+    }
+    addLanguage('java');// this method is reander every element and then at end add  text. when the element is more so its  delay the progarm .
+    
+    function addOptLanguage (langName){
+        const li= document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+
+    addOptLanguage('python');
+
+    // edit the value
+    const secondLaguage= document.querySelector("li:nth-child(2)")
+    // secondLaguage.innerHTML="mojo" // this not optimze way to do this .
+    const newLi= document.createElement('li');
+    newLi.textContent="mojo";
+    secondLaguage.replaceWith(newLi);
+
+    // Edit
+    const firstLange= document.querySelector('li:first-child');
+    firstLange.outerHTML='<li>TypeScript</li>'    
+    
+    // remove
+    const last = document.querySelector('li:last-child');
+    last.remove();
+
+
+</script>
+</html>

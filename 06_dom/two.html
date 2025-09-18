@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai Aur Code</title>
+</head>
+<body style="background-color: black;color:#ffff">
+    <div class="parent">
+        <div class="dyas">Monday</div>
+        <div class="dyas">Tuseday</div>
+        <div class="dyas">Wednesday</div>
+        <div class="dyas">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent= document.querySelector('.parent')
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[0]);
+    console.log(parent.children[1].innerHTML);
+    
+    for (let i = 0; i < parent.children.length; i++) {
+       console.log(parent.children[i].innerHTML);
+    }
+    parent.children[1].style.color="Green";
+    console.log(parent.firstElementChild);// this will give as child node of parent first child.
+    console.log(parent.lastElementChild); // this will give as child node of parent last node.
+    console.log("///////////////////////////////////");
+    
+    const dayOne = document.querySelector('.dyas');
+    console.log(dayOne);// this give as first element .
+    console.log(dayOne.parentElement);// this tell the parent element of the selected element.
+    console.log(dayOne.nextElementSibling);// this will give u the next sibling of the selected element.
+
+    console.log("NODES: " , dayOne.parentNode);// this will give as the parentnode.
+    console.log("NODES: " , parent.childNodes);// this give as nodelist of child .
+    
+    
+    
+    
+    
+
+
+</script>
+</html>
