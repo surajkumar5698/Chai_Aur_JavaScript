@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .results {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #0072ff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <!-- Card -->
+        <div class="card p-4">
+          <h2 class="text-center text-success mb-3">BMI Calculator</h2>
+          
+          <!-- Form -->
+          <form id="bmiForm">
+            <div class="mb-3">
+              <label for="height" class="form-label">Height (cm)</label>
+              <input type="number" class="form-control" id="height" placeholder="Enter height in cm">
+            </div>
+            <div class="mb-3">
+              <label for="weight" class="form-label">Weight (kg)</label>
+              <input type="number" class="form-control" id="weight" placeholder="Enter weight in kg">
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-success btn-lg">Calculate</button>
+            </div>
+          </form>
+
+          <!-- Results -->
+          <div class="results text-center mt-4">Enter values to calculate BMI</div>
+
+          <!-- BMI Guide -->
+          <div class="mt-4">
+            <h5 class="text-success">BMI Weight Guide</h5>
+            <ul class="list-group">
+              <li class="list-group-item">Under Weight: Less than <strong>18.6</strong></li>
+              <li class="list-group-item">Normal Range: <strong>18.6 – 24.9</strong></li>
+              <li class="list-group-item">Over Weight: Greater than <strong>24.9</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="bmiPage.js"></script>
+</body>
+</html>
+
